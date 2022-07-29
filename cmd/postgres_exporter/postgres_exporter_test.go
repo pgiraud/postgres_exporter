@@ -231,6 +231,10 @@ func (s *FunctionalSuite) TestParseFingerprint(c *C) {
 			fingerprint: "localhost:55432",
 		},
 		{
+			url:         "postgresql://userDsn:password%20Dsn@localhost:55432/?sslmode=disabled",
+			fingerprint: "localhost:55432",
+		},
+		{
 			url:         "port=1234",
 			fingerprint: "localhost:1234",
 		},
